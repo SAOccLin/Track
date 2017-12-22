@@ -1,0 +1,71 @@
+//
+//  PrefixHeader.pch
+//  Track
+//
+//  Created by apple on 16/9/7.
+//  Copyright © 2016年 Mac. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define DeviceID [FCUUID uuidForDevice]//appId
+#define MYURL [NSString stringWithFormat:@"http://api.sunsyi.com:8081/Track/"]
+//1一定要先配置自己项目在商店的APPID,配置完最好在真机上运行才能看到完全效果哦
+#define STOREAPPID @"1080182980"
+//#define MYURL [NSString stringWithFormat:@"http://host/Track/"]
+#import "XYAddVC.h"
+#import "XYContactVC.h"
+#import "XYMapVC.h"
+#import "XYMineVC.h"
+#import "XYNewsVC.h"
+#import "XYMainVC.h"
+#import "XYNavVC.h"
+#import "LoginVC.h"
+#import "LogonVC.h"
+#import "ForgetPassWordVC.h"
+#import "ChangeUserNameView.h"
+#import "FMDBTool.h"
+#import "Reachability.h"
+#import "WSTextField.h"
+#import "MyText.h"
+#import "LoginText.h"
+#import "AddText.h"
+#import "AddButton.h"
+#import "FriendsTableViewCell.h"
+#import "MessageTableViewCell.h"
+#import "NotificationButton.h"
+#import "LocationChange.h"
+
+#import <SMS_SDK/SMSSDK.h>
+#import "AFHTTPSessionManager.h"
+#import "UMessage.h"
+#import "FMDatabase.h"
+#import <QuartzCore/QuartzCore.h>
+#import "SVProgressHUD.h"
+#import "FCUUID.h"
+#import "SDWebImageManager.h"
+#import "AFHTTPRequestOperation.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HIGHT [UIScreen mainScreen].bounds.size.height
+
+
+#define setNav self.view.backgroundColor = [UIColor clearColor];[self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];[self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];self.navigationController.navigationBar.translucent = YES;[self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+
+#define setWaring [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideView) name:@"haveLocation" object:nil];[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(NotHideView) name:@"haveNotLocation" object:nil];self.warningView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];self.warningView.hidden = YES;self.warningView.backgroundColor = [UIColor colorWithRed:54.0/255 green:54.0/255 blue:54.0/255 alpha:0.65];[self.view addSubview:self.warningView];UIView *hidView = [[UIView alloc]initWithFrame:CGRectMake(5, HIGHT/2-50, WIDTH-10, 100)];hidView.layer.cornerRadius = 2;hidView.layer.masksToBounds = YES;hidView.backgroundColor = [UIColor whiteColor];[self.warningView addSubview:hidView];UILabel *lab  = [[UILabel alloc]initWithFrame:CGRectMake(15, 10, WIDTH-30, 30)];lab.text = @"请将APP的定位权限设置为始终";lab.textAlignment = NSTextAlignmentCenter;[hidView addSubview:lab];UIView *line = [[UIView alloc]initWithFrame:CGRectMake(10, 50, WIDTH-20, 1)];line.backgroundColor = [UIColor colorWithRed:192.0/255 green:192.0/255 blue:192.0/255 alpha:1];[hidView addSubview:line];UIButton *LocationBut = [[UIButton alloc]initWithFrame:CGRectMake(WIDTH/2-30, 60, 60, 30)];[LocationBut setTitle:@"设置" forState:UIControlStateNormal];[LocationBut setTitleColor:[UIColor colorWithRed:86.0/255 green:142.0/255 blue:191.0/255 alpha:1] forState:UIControlStateNormal];[LocationBut addTarget:self action:@selector(goToSetLocation) forControlEvents:UIControlEventTouchUpInside];[hidView addSubview:LocationBut];
+
+//注释所有nslog
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define NSLog(...)
+#define debugMethod()
+#endif
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

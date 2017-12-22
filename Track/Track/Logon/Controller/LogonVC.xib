@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogonVC">
+            <connections>
+                <outlet property="login" destination="4FB-R9-Rdv" id="C8L-lA-mVi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FB-R9-Rdv">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="Bgh-cL-xvk"/>
+                        <constraint firstAttribute="height" constant="37" id="vGu-bM-6gQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="免费注册">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="jumpLogin:" destination="-1" eventType="touchUpInside" id="XJc-iG-Ijv"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="行踪" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGZ-Lo-Mdr">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="78" id="0lB-VK-SCP"/>
+                        <constraint firstAttribute="height" constant="29" id="QRb-6b-rxx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4FB-R9-Rdv" secondAttribute="bottom" constant="42" id="62b-6H-gHe"/>
+                <constraint firstItem="gGZ-Lo-Mdr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="GJ5-5M-X6b"/>
+                <constraint firstItem="4FB-R9-Rdv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="egH-gN-vHy"/>
+                <constraint firstItem="gGZ-Lo-Mdr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tCQ-Rq-KBz"/>
+            </constraints>
+            <point key="canvasLocation" x="-64" y="45"/>
+        </view>
+    </objects>
+</document>

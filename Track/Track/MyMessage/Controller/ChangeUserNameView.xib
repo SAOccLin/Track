@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeUserNameView">
+            <connections>
+                <outlet property="change" destination="fce-31-XHj" id="xVD-7I-6ab"/>
+                <outlet property="userName" destination="f3h-yH-4tB" id="4al-lA-1Jd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKF-up-Sql">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="59" id="DVY-Q3-2q4"/>
+                        <constraint firstAttribute="height" constant="30" id="uy0-MP-QW5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3h-yH-4tB">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="50b-bQ-KQi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fce-31-XHj">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="84" id="uIn-eO-3nS"/>
+                        <constraint firstAttribute="height" constant="30" id="xvk-8F-0Ma"/>
+                    </constraints>
+                    <state key="normal" title="修改用户名">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="changeUserName:" destination="-1" eventType="touchUpInside" id="xlK-Le-YZc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fce-31-XHj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="57C-g2-n9A"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fce-31-XHj" secondAttribute="bottom" constant="175" id="8uA-lS-jSf"/>
+                <constraint firstItem="fce-31-XHj" firstAttribute="top" secondItem="f3h-yH-4tB" secondAttribute="bottom" constant="147" id="N7f-Hi-C52"/>
+                <constraint firstItem="f3h-yH-4tB" firstAttribute="leading" secondItem="AKF-up-Sql" secondAttribute="trailing" constant="19" id="aKZ-VF-s1P"/>
+                <constraint firstAttribute="trailing" secondItem="f3h-yH-4tB" secondAttribute="trailing" constant="34" id="cHI-nl-Nu6"/>
+                <constraint firstItem="AKF-up-Sql" firstAttribute="centerY" secondItem="f3h-yH-4tB" secondAttribute="centerY" id="nmF-83-HHd"/>
+                <constraint firstItem="f3h-yH-4tB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="98" id="nqf-Zy-cuW"/>
+                <constraint firstItem="AKF-up-Sql" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="o5N-Co-lJO"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYMineVC">
+            <connections>
+                <outlet property="headView" destination="tKw-SV-mum" id="31V-Ur-NgS"/>
+                <outlet property="imageBackGroundView" destination="qBh-j0-mnG" id="0eO-bI-1Yp"/>
+                <outlet property="mineTv" destination="peb-7n-VdN" id="9gI-n6-SsG"/>
+                <outlet property="userName" destination="a8s-us-lqd" id="Rv8-4n-A3x"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBh-j0-mnG">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="圆头像.png" translatesAutoresizingMaskIntoConstraints="NO" id="tKw-SV-mum">
+                            <rect key="frame" x="100" y="42" width="120" height="120"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="WSo-JS-JHC"/>
+                                <constraint firstAttribute="height" constant="120" id="kCS-5K-eJj"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="IFg-jj-n11" appends="YES" id="ThA-VS-gXP"/>
+                            </connections>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8s-us-lqd">
+                            <rect key="frame" x="89.5" y="170" width="141" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="141" id="i4p-Z0-hug"/>
+                                <constraint firstAttribute="height" constant="30" id="nQ7-fn-eoO"/>
+                            </constraints>
+                            <state key="normal">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="goToChangeUserName:" destination="-1" eventType="touchUpInside" id="kJf-Pw-IBU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="a8s-us-lqd" firstAttribute="centerX" secondItem="qBh-j0-mnG" secondAttribute="centerX" id="566-4g-UVL"/>
+                        <constraint firstItem="tKw-SV-mum" firstAttribute="centerX" secondItem="qBh-j0-mnG" secondAttribute="centerX" id="9mt-Yf-Fwj"/>
+                        <constraint firstAttribute="height" constant="199" id="Gkg-cz-3Wv"/>
+                        <constraint firstItem="tKw-SV-mum" firstAttribute="top" secondItem="qBh-j0-mnG" secondAttribute="top" constant="42" id="Vb4-6E-GHv"/>
+                        <constraint firstAttribute="bottom" secondItem="a8s-us-lqd" secondAttribute="bottom" constant="-1" id="joF-Ea-w5P"/>
+                        <constraint firstItem="a8s-us-lqd" firstAttribute="top" secondItem="tKw-SV-mum" secondAttribute="bottom" constant="8" id="xvK-8q-a4e"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="peb-7n-VdN">
+                    <rect key="frame" x="0.0" y="224" width="320" height="196"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="196" id="KZG-mk-04f"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="0ks-au-qv8"/>
+                        <outlet property="delegate" destination="-1" id="GxQ-HX-USg"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qBh-j0-mnG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7ui-Ku-A0N"/>
+                <constraint firstItem="qBh-j0-mnG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hfr-P5-MqD"/>
+                <constraint firstAttribute="trailing" secondItem="qBh-j0-mnG" secondAttribute="trailing" id="LDz-Zq-94W"/>
+                <constraint firstAttribute="trailing" secondItem="peb-7n-VdN" secondAttribute="trailing" id="Ubo-q0-69V"/>
+                <constraint firstItem="peb-7n-VdN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wu1-Et-ozf"/>
+                <constraint firstItem="peb-7n-VdN" firstAttribute="top" secondItem="qBh-j0-mnG" secondAttribute="bottom" constant="25" id="YIe-Kw-ARA"/>
+            </constraints>
+            <point key="canvasLocation" x="50" y="314"/>
+        </view>
+        <tapGestureRecognizer id="IFg-jj-n11">
+            <connections>
+                <action selector="changeUserIcon:" destination="-1" id="4AK-5H-wAt"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="圆头像.png" width="113" height="114"/>
+    </resources>
+</document>
